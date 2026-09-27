@@ -40,6 +40,6 @@ python3 -m http.server 8000
 
 ## Fotoğraf ekleme
 
-Görseller şu an CSS ile çizilmiş deri dokularından oluşur. Gerçek fotoğraflar `assets/img/` klasörüne konup ilgili bölümlere (anasayfa slider'ı `.slide-1/2/3`, tanıtım bandı `.split-visual`) arka plan olarak eklenebilir.
+Anasayfa slider'ındaki deri görselleri `assets/img/slide-1.webp`, `slide-2.webp` ve `slide-3.webp` dosyalarıdır (bilgisayarla üretilmiş deri dokularıdır). Gerçek fotoğrafla değiştirmek için aynı adla, yaklaşık 1600×830 piksel boyutunda yeni bir görsel koymak yeterlidir. Tanıtım bandı (`.split-visual`) ve ürün kartları şu an CSS ile çizilmiş dokular kullanır.
 
 CSS veya JS değiştirildiğinde, tarayıcıların eski dosyayı kullanmaması için HTML dosyalarındaki `style.css?v=…` ve `main.js?v=…` sürüm numaralarını artırın.
