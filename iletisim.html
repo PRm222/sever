@@ -4,8 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>İletişim | Sever Deri</title>
-  <meta name="description" content="Sever Deri iletişim bilgileri: adres, telefon, e-posta ve iletişim formu.">
-  <meta name="theme-color" content="#2b1d14">
+  <meta name="description" content="Sever Deri iletişim bilgileri, teklif ve numune talep formu.">
+  <meta name="theme-color" content="#151515">
+  <meta property="og:title" content="İletişim | Sever Deri">
+  <meta property="og:description" content="Sever Deri iletişim bilgileri, teklif ve numune talep formu.">
+  <meta property="og:type" content="website">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,30 +17,90 @@
 </head>
 <body data-page="iletisim">
 
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-info">
+        <a href="tel:+905000000000"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+90 500 000 00 00</a>
+        <a href="mailto:info@severderi.com"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>info@severderi.com</a>
+        <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Pzt – Cmt, 09:00 – 18:00</span>
+      </div>
+      <div class="social">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></svg></a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://wa.me/905000000000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.7-5A9 9 0 1 1 8 19.3L3 21z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 1c-1-.4-2.1-1.5-2.5-2.5l1-1-1-2L9 9.5z"/></svg></a>
+        </div>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="Sever Deri anasayfa">
-        <img src="assets/favicon.svg" alt="" width="36" height="36">
-        <span>Sever <em>Deri</em></span>
+        <img src="assets/favicon.svg" alt="" width="40" height="40">
+        <span class="brand-text"><span>Sever <em>Deri</em></span><small>Deri Üretim Atölyesi</small></span>
       </a>
-      <button class="nav-toggle" aria-label="Menüyü aç" aria-expanded="false" aria-controls="site-nav">
+      <nav class="site-nav" id="site-nav" aria-label="Ana menü">
+        <ul class="nav-list">
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li class="has-sub">
+            <a href="urunlerimiz.html">Ürünlerimiz</a>
+            <button class="sub-toggle" type="button" aria-expanded="false" aria-label="Ürünlerimiz alt menüsünü aç"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            <ul class="sub-menu">
+              <li><a href="urunlerimiz.html#nappa">Nappa Deri</a></li>
+              <li><a href="urunlerimiz.html#suet">Süet Deri</a></li>
+              <li><a href="urunlerimiz.html#nubuk">Nubuk Deri</a></li>
+              <li><a href="urunlerimiz.html#double-face">Double Face / Kürk</a></li>
+              <li><a href="urunlerimiz.html#astar">Astarlık Deri</a></li>
+              <li><a href="urunlerimiz.html#vintage">Vintage / Yağlı Deri</a></li>
+              <li><a href="urunlerimiz.html#baskili">Baskılı & Desenli Deri</a></li>
+              <li><a href="urunlerimiz.html#ozel-finisaj">Özel Finisaj</a></li>
+              <li class="sub-all"><a href="urunlerimiz.html">Tümünü görüntüle</a></li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
+            <button class="sub-toggle" type="button" aria-expanded="false" aria-label="Hizmetlerimiz alt menüsünü aç"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            <ul class="sub-menu">
+              <li><a href="hizmetlerimiz.html#tabaklama">Tabaklama</a></li>
+              <li><a href="hizmetlerimiz.html#boyama">Boyama & Renklendirme</a></li>
+              <li><a href="hizmetlerimiz.html#finisaj">Finisaj</a></li>
+              <li><a href="hizmetlerimiz.html#fason">Fason Üretim</a></li>
+              <li><a href="hizmetlerimiz.html#numune">Numune Hazırlama</a></li>
+              <li><a href="hizmetlerimiz.html#kalite">Kalite Kontrol</a></li>
+              <li><a href="hizmetlerimiz.html#sevkiyat">Paketleme & Sevkiyat</a></li>
+              <li><a href="hizmetlerimiz.html#destek">Teknik Destek</a></li>
+              <li class="sub-all"><a href="hizmetlerimiz.html">Tümünü görüntüle</a></li>
+            </ul>
+          </li>
+          <li><a href="iletisim.html" class="active" aria-current="page">İletişim</a></li>
+        </ul>
+        <div class="nav-mobile-extra">
+          <a href="tel:+905000000000"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+90 500 000 00 00</a>
+          <a href="mailto:info@severderi.com"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>info@severderi.com</a>
+          <a href="iletisim.html" class="btn">Teklif Al</a>
+          <div class="social">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></svg></a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://wa.me/905000000000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.7-5A9 9 0 1 1 8 19.3L3 21z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 1c-1-.4-2.1-1.5-2.5-2.5l1-1-1-2L9 9.5z"/></svg></a>
+        </div>
+        </div>
+      </nav>
+      <a href="iletisim.html" class="btn btn-small header-cta">Teklif Al</a>
+      <button class="nav-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
       </button>
-      <nav class="site-nav" id="site-nav">
-        <a href="index.html" data-nav="anasayfa">Anasayfa</a>
-        <a href="hakkimizda.html" data-nav="hakkimizda">Hakkımızda</a>
-        <a href="hizmetlerimiz.html" data-nav="hizmetlerimiz">Hizmetlerimiz</a>
-        <a href="iletisim.html" data-nav="iletisim">İletişim</a>
-      </nav>
     </div>
   </header>
+  <div class="nav-backdrop" hidden></div>
 
-  <main>
+  <main id="main">
     <section class="page-hero">
       <div class="container">
         <p class="breadcrumb"><a href="index.html">Anasayfa</a> / İletişim</p>
         <h1>İletişim</h1>
-        <p class="lead">Sipariş, fiyat bilgisi ya da özel tasarım talepleriniz için bize ulaşın.</p>
+        <p class="lead">Fiyat teklifi, numune ya da fason üretim talepleriniz için bize ulaşın.</p>
       </div>
       <div class="hero-stitch" aria-hidden="true"></div>
     </section>
@@ -47,58 +110,51 @@
         <div class="contact-info">
           <p class="eyebrow">Bize Ulaşın</p>
           <h2>Atölyemize bekleriz</h2>
-          <ul class="contact-list">
-            <li>
-              <span class="contact-label">Adres</span>
-              <span>Örnek Mah. Deri Sok. No: 1, İstanbul</span>
-            </li>
-            <li>
-              <span class="contact-label">Telefon</span>
-              <a href="tel:+905000000000">+90 500 000 00 00</a>
-            </li>
-            <li>
-              <span class="contact-label">WhatsApp</span>
-              <a href="https://wa.me/905000000000" target="_blank" rel="noopener">Mesaj gönderin</a>
-            </li>
-            <li>
-              <span class="contact-label">E-posta</span>
-              <a href="mailto:info@severderi.com">info@severderi.com</a>
-            </li>
-            <li>
-              <span class="contact-label">Çalışma Saatleri</span>
-              <span>Pazartesi – Cumartesi, 09:00 – 18:00</span>
-            </li>
+          <p>Formu doldurabilir ya da aşağıdaki kanallardan bize doğrudan ulaşabilirsiniz.</p>
+          <ul class="contact-cards">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><div><span class="contact-label">Adres</span><span>Örnek Mah. Deri Sok. No: 1, İstanbul</span></div></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><div><span class="contact-label">Telefon</span><a href="tel:+905000000000">+90 500 000 00 00</a></div></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.7-5A9 9 0 1 1 8 19.3L3 21z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 1c-1-.4-2.1-1.5-2.5-2.5l1-1-1-2L9 9.5z"/></svg><div><span class="contact-label">WhatsApp</span><a href="https://wa.me/905000000000" target="_blank" rel="noopener">Mesaj gönderin</a></div></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><div><span class="contact-label">E-posta</span><a href="mailto:info@severderi.com">info@severderi.com</a></div></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><span class="contact-label">Çalışma Saatleri</span><span>Pzt – Cmt, 09:00 – 18:00</span></div></li>
           </ul>
         </div>
         <form class="contact-form" id="contact-form" novalidate>
-          <h2 class="form-title">Mesaj Gönderin</h2>
-          <div class="field">
-            <label for="name">Adınız Soyadınız</label>
-            <input id="name" name="name" type="text" autocomplete="name" required>
+          <h2 class="form-title">Teklif &amp; Bilgi Formu</h2>
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Adınız Soyadınız</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="company">Firma <small>(isteğe bağlı)</small></label>
+              <input id="company" name="company" type="text" autocomplete="organization">
+            </div>
           </div>
-          <div class="field">
-            <label for="email">E-posta</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
-          </div>
-          <div class="field">
-            <label for="phone">Telefon <small>(isteğe bağlı)</small></label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel">
+          <div class="field-row">
+            <div class="field">
+              <label for="email">E-posta</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="phone">Telefon <small>(isteğe bağlı)</small></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel">
+            </div>
           </div>
           <div class="field">
             <label for="subject">Konu</label>
             <select id="subject" name="subject">
+              <option>Fiyat teklifi</option>
+              <option>Numune talebi</option>
+              <option>Fason üretim</option>
               <option>Genel bilgi</option>
-              <option>Sipariş / fiyat teklifi</option>
-              <option>Kurumsal üretim</option>
-              <option>Özel tasarım</option>
-              <option>Bakım &amp; onarım</option>
             </select>
           </div>
           <div class="field">
             <label for="message">Mesajınız</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="5" required placeholder="Deri tipi, renk, miktar gibi bilgileri yazabilirsiniz."></textarea>
           </div>
-          <button type="submit" class="btn">Mesaj Gönder</button>
+          <button type="submit" class="btn">Gönder</button>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -109,7 +165,7 @@
         <div class="map">
           <iframe
             title="Sever Deri konum haritası"
-            src="https://www.google.com/maps?q=Istanbul&output=embed"
+            src="https://www.google.com/maps?q=Istanbul&amp;output=embed"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -119,26 +175,54 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
+      <div class="footer-brand">
         <a href="index.html" class="brand">
-          <img src="assets/favicon.svg" alt="" width="30" height="30">
-          <span>Sever <em>Deri</em></span>
+          <img src="assets/favicon.svg" alt="" width="40" height="40">
+          <span class="brand-text"><span>Sever <em>Deri</em></span><small>Deri Üretim Atölyesi</small></span>
         </a>
-        <p class="footer-note">Ustalıkla işlenen deri, ömürlük bir iz.</p>
+        <p class="footer-about">Hammaddeden bitmiş deriye kadar tüm aşamaları kendi atölyemizde yürütüyor, istenen renk ve dokuda kaliteli deri üretiyoruz.</p>
+        <div class="social">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></svg></a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://wa.me/905000000000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.7-5A9 9 0 1 1 8 19.3L3 21z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 1c-1-.4-2.1-1.5-2.5-2.5l1-1-1-2L9 9.5z"/></svg></a>
+        </div>
       </div>
-      <nav class="footer-nav" aria-label="Alt menü">
-        <a href="index.html">Anasayfa</a>
-        <a href="hakkimizda.html">Hakkımızda</a>
-        <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
-        <a href="iletisim.html">İletişim</a>
-      </nav>
-      <div class="footer-contact">
-        <a href="tel:+905000000000">+90 500 000 00 00</a>
-        <a href="mailto:info@severderi.com">info@severderi.com</a>
+      <div>
+        <h2 class="footer-title">Kurumsal</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="urunlerimiz.html">Ürünlerimiz</a></li>
+          <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-title">Ürünlerimiz</h2>
+        <ul class="footer-links">
+          <li><a href="urunlerimiz.html#nappa">Nappa Deri</a></li>
+          <li><a href="urunlerimiz.html#suet">Süet Deri</a></li>
+          <li><a href="urunlerimiz.html#nubuk">Nubuk Deri</a></li>
+          <li><a href="urunlerimiz.html#double-face">Double Face / Kürk</a></li>
+          <li><a href="urunlerimiz.html#astar">Astarlık Deri</a></li>
+          <li><a href="urunlerimiz.html">Tüm ürünler</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-title">İletişim</h2>
+        <ul class="footer-contact">
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Örnek Mah. Deri Sok. No: 1, İstanbul</span></li>
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+905000000000">+90 500 000 00 00</a></li>
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:info@severderi.com">info@severderi.com</a></li>
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Pzt – Cmt, 09:00 – 18:00</span></li>
+        </ul>
       </div>
     </div>
-    <div class="container footer-bottom">
-      <p>&copy; <span id="year">2026</span> Sever Deri. Tüm hakları saklıdır.</p>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="year">2026</span> Sever Deri. Tüm hakları saklıdır.</p>
+        <button class="to-top" type="button" aria-label="Sayfanın başına dön"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>Yukarı</button>
+      </div>
     </div>
   </footer>
 

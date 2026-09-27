@@ -2,22 +2,88 @@
 (function () {
   "use strict";
 
-  // Aktif menü bağlantısını işaretle
-  var page = document.body.getAttribute("data-page");
-  document.querySelectorAll(".site-nav a[data-nav]").forEach(function (link) {
-    if (link.getAttribute("data-nav") === page) {
-      link.classList.add("active");
-      link.setAttribute("aria-current", "page");
-    }
-  });
+  var body = document.body;
+  var header = document.querySelector(".site-header");
+  var nav = document.getElementById("site-nav");
+  var toggle = document.querySelector(".nav-toggle");
+  var backdrop = document.querySelector(".nav-backdrop");
 
   // Mobil menü
-  var toggle = document.querySelector(".nav-toggle");
-  if (toggle) {
-    toggle.addEventListener("click", function () {
-      var open = document.body.classList.toggle("nav-open");
+  function setMenu(open) {
+    body.classList.toggle("nav-open", open);
+    if (toggle) {
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "Menüyü kapat" : "Menüyü aç");
+    }
+    if (backdrop) backdrop.hidden = !open;
+  }
+
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      setMenu(!body.classList.contains("nav-open"));
+    });
+  }
+  if (backdrop) backdrop.addEventListener("click", function () { setMenu(false); });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape") return;
+    if (body.classList.contains("nav-open")) {
+      setMenu(false);
+      toggle.focus();
+    }
+    closeSubs();
+  });
+
+  if (nav) {
+    nav.addEventListener("click", function (e) {
+      if (e.target.closest("a")) setMenu(false);
+    });
+  }
+
+  // Masaüstüne geçildiğinde açık kalan mobil menüyü kapat
+  window.matchMedia("(min-width: 961px)").addEventListener("change", function (mq) {
+    if (mq.matches) setMenu(false);
+  });
+
+  // Alt menüler
+  var subToggles = document.querySelectorAll(".sub-toggle");
+
+  function closeSubs(except) {
+    subToggles.forEach(function (btn) {
+      var li = btn.parentElement;
+      if (li === except) return;
+      li.classList.remove("sub-open");
+      btn.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  subToggles.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var li = btn.parentElement;
+      var open = !li.classList.contains("sub-open");
+      closeSubs(li);
+      li.classList.toggle("sub-open", open);
+      btn.setAttribute("aria-expanded", String(open));
+    });
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".has-sub")) closeSubs();
+  });
+
+  // Kaydırınca header gölgesi
+  function onScroll() {
+    if (header) header.classList.toggle("scrolled", window.scrollY > 10);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  // Yukarı çık
+  var toTop = document.querySelector(".to-top");
+  if (toTop) {
+    toTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
 
@@ -26,7 +92,7 @@
   if (year) year.textContent = new Date().getFullYear();
 
   // Kaydırınca belirme efekti
-  var revealEls = document.querySelectorAll(".card, .steps li, .feature, .about > *, .contact > *");
+  var revealEls = document.querySelectorAll(".card, .product, .steps li, .feature, .sectors li, .mv-card, .about > *, .contact > *");
   if ("IntersectionObserver" in window) {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -55,6 +121,7 @@
     status.className = "form-status";
 
     var name = f.name.value.trim();
+    var company = f.company ? f.company.value.trim() : "";
     var email = f.email.value.trim();
     var phone = f.phone.value.trim();
     var subject = f.subject ? f.subject.value : "Genel bilgi";
@@ -74,8 +141,9 @@
       return;
     }
 
-    var body =
+    var mailBody =
       "Ad Soyad: " + name + "\n" +
+      (company ? "Firma: " + company + "\n" : "") +
       "E-posta: " + email + "\n" +
       (phone ? "Telefon: " + phone + "\n" : "") +
       "\n" + message;
@@ -83,7 +151,7 @@
     window.location.href =
       "mailto:" + CONTACT_EMAIL +
       "?subject=" + encodeURIComponent("Web sitesi: " + subject) +
-      "&body=" + encodeURIComponent(body);
+      "&body=" + encodeURIComponent(mailBody);
 
     status.textContent = "E-posta uygulamanız açılıyor. Teşekkür ederiz!";
     status.classList.add("success");

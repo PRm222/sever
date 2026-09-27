@@ -1,6 +1,6 @@
 # Sever Deri — Kurumsal Web Sitesi
 
-Sever Deri deri atölyesini tanıtan, çok sayfalı statik web sitesi. Derleme adımı gerektirmez; dosyalar herhangi bir statik sunucuda (GitHub Pages, Netlify, klasik hosting) doğrudan yayınlanabilir.
+Sever Deri deri üretim atölyesini tanıtan, çok sayfalı statik web sitesi. Derleme adımı gerektirmez; dosyalar herhangi bir statik sunucuda (GitHub Pages, Netlify, klasik hosting) doğrudan yayınlanabilir.
 
 ## Sayfalar
 
@@ -8,6 +8,7 @@ Sever Deri deri atölyesini tanıtan, çok sayfalı statik web sitesi. Derleme a
 | --- | --- |
 | `index.html` | Anasayfa |
 | `hakkimizda.html` | Hakkımızda |
+| `urunlerimiz.html` | Ürünlerimiz (deri çeşitleri) |
 | `hizmetlerimiz.html` | Hizmetlerimiz |
 | `iletisim.html` | İletişim (form + harita) |
 
@@ -23,7 +24,8 @@ assets/favicon.svg  Logo / site ikonu
 
 Aşağıdaki bilgiler örnek olarak girilmiştir, gerçek bilgilerle değiştirin:
 
-- **Adres, telefon, WhatsApp, e-posta, çalışma saatleri** — `iletisim.html` ve her sayfanın alt bilgisi (footer)
+- **Adres, telefon, WhatsApp, e-posta, çalışma saatleri** — `iletisim.html` ile her sayfanın üst bilgi çubuğu, mobil menüsü ve alt bilgisi (footer)
+- **Instagram / Facebook bağlantıları** — her sayfadaki `social` bloklarında (şu an genel adreslere gidiyor)
 - **Form alıcı e-postası** — `js/main.js` içindeki `CONTACT_EMAIL`
 - **Harita** — `iletisim.html` içindeki `iframe` `src` adresi (Google Maps > Paylaş > Harita yerleştir)
 
