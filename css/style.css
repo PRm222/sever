@@ -467,9 +467,9 @@ p  { margin: 0 0 1em; }
 .slide-inner { position: relative; z-index: 2; width: 100%; }
 
 /* Deri görselleri: ::before görsel (yavaş yakınlaşma), ::after okunabilirlik katmanı */
-.slide-1 { --slide-img: url("../assets/img/slide-1.webp"); }
-.slide-2 { --slide-img: url("../assets/img/slide-2.webp"); }
-.slide-3 { --slide-img: url("../assets/img/slide-3.webp"); }
+.slide-1 { --slide-img: url("../assets/img/slide-1.webp?v=2"); }
+.slide-2 { --slide-img: url("../assets/img/slide-2.webp?v=2"); }
+.slide-3 { --slide-img: url("../assets/img/slide-3.webp?v=2"); }
 .slide::before,
 .slide::after {
   content: "";
