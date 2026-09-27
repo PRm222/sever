@@ -84,6 +84,62 @@
     if (!e.target.closest(".has-sub")) closeSubs();
   });
 
+  // Anasayfa slider
+  var slider = document.querySelector(".slider");
+  if (slider) {
+    var slides = slider.querySelectorAll(".slide");
+    var dots = slider.querySelectorAll(".slider-dots button");
+    var current = 0;
+    var timer = null;
+    var DELAY = 6000;
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    var show = function (i) {
+      current = (i + slides.length) % slides.length;
+      slides.forEach(function (s, n) {
+        s.classList.toggle("is-active", n === current);
+        s.setAttribute("aria-hidden", String(n !== current));
+      });
+      dots.forEach(function (d, n) { d.setAttribute("aria-selected", String(n === current)); });
+    };
+    var stop = function () { clearInterval(timer); timer = null; };
+    var start = function () {
+      if (reduceMotion || slides.length < 2) return;
+      stop();
+      timer = setInterval(function () { show(current + 1); }, DELAY);
+    };
+
+    slider.querySelector(".slider-arrow.prev").addEventListener("click", function () { show(current - 1); start(); });
+    slider.querySelector(".slider-arrow.next").addEventListener("click", function () { show(current + 1); start(); });
+    dots.forEach(function (d, n) {
+      d.addEventListener("click", function () { show(n); start(); });
+    });
+
+    // Fare üzerindeyken ya da içeride odak varken dur
+    slider.addEventListener("mouseenter", stop);
+    slider.addEventListener("mouseleave", start);
+    slider.addEventListener("focusin", stop);
+    slider.addEventListener("focusout", start);
+
+    // Dokunmatik kaydırma
+    var touchX = null;
+    slider.addEventListener("touchstart", function (e) { touchX = e.touches[0].clientX; }, { passive: true });
+    slider.addEventListener("touchend", function (e) {
+      if (touchX === null) return;
+      var dx = e.changedTouches[0].clientX - touchX;
+      if (Math.abs(dx) > 50) { show(current + (dx < 0 ? 1 : -1)); start(); }
+      touchX = null;
+    });
+
+    // Sekme arka plandayken çalışmasın
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) stop(); else start();
+    });
+
+    show(0);
+    start();
+  }
+
   // Kaydırınca header gölgesi
   function onScroll() {
     if (header) header.classList.toggle("scrolled", window.scrollY > 10);

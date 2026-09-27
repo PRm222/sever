@@ -37,3 +37,9 @@ Aşağıdaki bilgiler örnek olarak girilmiştir, gerçek bilgilerle değiştiri
 python3 -m http.server 8000
 # http://localhost:8000 adresini açın
 ```
+
+## Fotoğraf ekleme
+
+Görseller şu an CSS ile çizilmiş deri dokularından oluşur. Gerçek fotoğraflar `assets/img/` klasörüne konup ilgili bölümlere (anasayfa slider'ı `.slide-1/2/3`, tanıtım bandı `.split-visual`) arka plan olarak eklenebilir.
+
+CSS veya JS değiştirildiğinde, tarayıcıların eski dosyayı kullanmaması için HTML dosyalarındaki `style.css?v=…` ve `main.js?v=…` sürüm numaralarını artırın.
