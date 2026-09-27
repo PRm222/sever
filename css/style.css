@@ -199,6 +199,7 @@ p  { margin: 0 0 1em; }
 }
 .brand em { font-style: normal; color: var(--gold); }
 .brand:hover { color: var(--bg); }
+.brand-logo { width: auto; height: 64px; flex: none; }
 .brand-text { display: flex; flex-direction: column; gap: 4px; }
 .brand small {
   font-family: var(--font-sans);
@@ -682,6 +683,7 @@ p  { margin: 0 0 1em; }
   border: 2px dashed rgba(201, 164, 92, .7);
   border-radius: 14px;
 }
+.leather-card img { position: relative; width: 78%; height: auto; filter: drop-shadow(0 12px 24px rgba(0, 0, 0, .45)); }
 .leather-card-mark {
   font-family: var(--font-serif);
   font-size: 5.5rem;
@@ -1029,6 +1031,8 @@ p  { margin: 0 0 1em; }
   gap: 40px;
   padding-bottom: 56px;
 }
+.footer-logo { display: inline-block; }
+.footer-logo img { width: 176px; height: auto; }
 .footer-about { margin: 16px 0 20px; max-width: 320px; line-height: 1.7; }
 .footer-title {
   position: relative;
@@ -1243,7 +1247,8 @@ p  { margin: 0 0 1em; }
   .steps,
   .features,
   .footer-grid { grid-template-columns: 1fr; }
-  .brand { font-size: 1.4rem; }
+  .brand { font-size: 1.3rem; }
+  .brand-logo { height: 52px; }
   .sectors { grid-template-columns: repeat(2, 1fr); }
   .highlight { border-right: 0 !important; border-bottom: 1px dashed var(--line); }
   .highlight:last-child { border-bottom: 0; }

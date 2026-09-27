@@ -17,7 +17,10 @@ Sever Deri deri üretim atölyesini tanıtan, çok sayfalı statik web sitesi. D
 ```
 css/style.css       Tüm stiller
 js/main.js          Mobil menü, aktif menü, animasyonlar, iletişim formu
-assets/favicon.svg  Logo / site ikonu
+assets/logo.svg     Oval rozet logo (header, footer)
+assets/logo.png     Rozet logonun şeffaf PNG hali (1760×1200, baskı/sosyal medya)
+assets/logo-yatay.svg  SD monogramı + SEVER DERİ yazısı (yatay, açık zemin için)
+assets/favicon.svg  Tarayıcı sekmesi ikonu
 ```
 
 ## Düzenlenmesi gerekenler
