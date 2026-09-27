@@ -36,9 +36,21 @@
 
   if (nav) {
     nav.addEventListener("click", function (e) {
-      if (e.target.closest("a")) setMenu(false);
+      var link = e.target.closest("a");
+      if (!link) return;
+      setMenu(false);
+      closeSubs();
+      link.blur();
     });
   }
+
+  // Geri/ileri tuşuyla önbellekten dönülen sayfada menüyü kapalı başlat
+  window.addEventListener("pageshow", function (e) {
+    if (e.persisted) {
+      setMenu(false);
+      closeSubs();
+    }
+  });
 
   // Masaüstüne geçildiğinde açık kalan mobil menüyü kapat
   window.matchMedia("(min-width: 961px)").addEventListener("change", function (mq) {

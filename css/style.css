@@ -228,6 +228,7 @@ p  { margin: 0 0 1em; }
   border-bottom: 2px dashed var(--gold);
 }
 .has-sub > a { padding-right: .3em !important; }
+.has-sub > a.active::after { right: .3em; }
 
 .sub-toggle {
   display: grid;
@@ -242,7 +243,6 @@ p  { margin: 0 0 1em; }
   cursor: pointer;
 }
 .sub-toggle .icon { width: 14px; height: 14px; transition: transform .2s; }
-.has-sub:hover .sub-toggle .icon,
 .has-sub.sub-open .sub-toggle .icon { transform: rotate(180deg); }
 
 .sub-menu {
@@ -268,9 +268,14 @@ p  { margin: 0 0 1em; }
   left: 0; right: 0; top: -12px;
   height: 12px;
 }
-.has-sub:hover .sub-menu,
 .has-sub:focus-within .sub-menu,
 .has-sub.sub-open .sub-menu { opacity: 1; visibility: visible; transform: none; }
+/* Dokunmatik ekranlarda "hover" yeni sayfada takılı kalabildiği için
+   üzerine gelince açılma sadece fare kullanan cihazlarda etkin */
+@media (hover: hover) and (pointer: fine) {
+  .has-sub:hover .sub-menu { opacity: 1; visibility: visible; transform: none; }
+  .has-sub:hover .sub-toggle .icon { transform: rotate(180deg); }
+}
 .sub-menu a {
   display: block;
   padding: .55em .9em;
@@ -947,7 +952,6 @@ p  { margin: 0 0 1em; }
   .nav-list > li > a.active { background: rgba(255,255,255,.05); }
   .has-sub > a { padding-right: .6em !important; }
   .sub-toggle { width: 40px; height: 40px; margin: 0; }
-  .has-sub:hover .sub-toggle .icon { transform: none; }
   .has-sub.sub-open .sub-toggle .icon { transform: rotate(180deg); }
   .sub-menu,
   .has-sub:hover .sub-menu,
